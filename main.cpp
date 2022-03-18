@@ -3,6 +3,7 @@
 #include<algorithm>
 #include <cmath>
 #include <tuple>
+#include <fstream>
 
 using namespace std;
 
@@ -135,8 +136,13 @@ int main(){
     reverse(new_first_seq.begin(), new_first_seq.end());
     reverse(new_second_seq.begin(), new_second_seq.end());
 
-    cout << new_first_seq << endl;
-    cout << new_second_seq << endl;
+    ofstream output_file;
+    output_file.open ("output");
+
+    output_file << new_first_seq << '\n';
+    output_file << new_second_seq;
+
+    output_file.close();
 
     return 0;
 }

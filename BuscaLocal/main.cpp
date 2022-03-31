@@ -69,7 +69,7 @@ int main(){
 
     default_random_engine generator;
 
-    for(int g=0; g < 10; g++){
+    for(int g=0; g < 100; g++){
 
         vector<max_value> valores_max;
 

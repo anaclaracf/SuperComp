@@ -44,6 +44,9 @@ matrix max_score(matrix H, string first_seq, string second_seq, int k, int w){
 
 int main(){
 
+    ofstream output_file;
+    output_file.open ("output");
+
     int n, m;
     int max_k, k;
     int i, j , p;
@@ -51,7 +54,6 @@ int main(){
     string seqA, seqB;
     string new_seqA, new_seqB;
     string sub_seqA, sub_seqB;
-
     
     
     char first_signal = '-';
@@ -113,21 +115,21 @@ int main(){
             i = i_aleatorio(generator);
             sub_seqA = seqA.substr(i, k);
             new_seqA = first_signal + sub_seqA;
-
+            // cout << sub_seqA << " " <<new_seqA << " " << k << endl;
+            // calculando os scores de cada alinhamento
             H = max_score(H, new_seqA, new_seqB, k, w);
             int max = 0;
+            
 
+            // descobrindo os maiores scores
             for (i = 0; i < k; i++){
                 for (j = 0; j < k; j++){
-                    // cout << H[i][j] << "  ";
                     if(H[i][j] > max){
                         max = H[i][j];
                     }
                 }
-                // cout << endl;
             }
 
-            // cout << endl;
             highScore.score_max = max;
             highScore.seq = sub_seqA;
             valores_max.push_back(highScore);
@@ -138,20 +140,30 @@ int main(){
         int score_max = 0;
         string seq_final;
 
+        // atribuindo os scores as sequencias utilizadas
         for (int i = 0; i < tamanho_vetor; i++){
-            if(valores_max[i].score_max > score_max){
+            if(valores_max[i].score_max >= score_max){
                 score_max = valores_max[i].score_max;
                 seq_final = valores_max[i].seq;
-                // cout << seq_final;
             }
         } 
 
-        cout << "max score: " << score_max << endl;
-        cout << "sub sequencia A utilizada: " << seq_final << endl;
-        cout << "sub sequencia B utilizada: " << sub_seqB << endl;
-        cout << endl;
+        // cout << "max score: " << score_max << endl;
+        // cout << "sub sequencia A utilizada: " << seq_final << endl;
+        // cout << "sub sequencia B utilizada: " << sub_seqB << endl;
+        // cout << endl;
+
+        
+
+        output_file << "Max Score: "<< score_max << endl;
+        output_file << "sub sequencia A utilizada: " << seq_final << endl;
+        output_file << "sub sequencia B utilizada: " << sub_seqB << endl;
+        output_file << "-----------------------------------" << endl;
+
+
     }
 
+    output_file.close();
 
     
 

@@ -139,6 +139,7 @@ int main(){
     ofstream output_file;
     output_file.open ("output");
 
+    output_file << max_value << '\n';
     output_file << new_first_seq << '\n';
     output_file << new_second_seq;
 

@@ -7,37 +7,9 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-vector<string> sub_A, sub_B;
 typedef vector<vector<int>> matrix;
 
-void genSubSeqA(string input, string output){
-
-    if (input.empty()) {
-        if(output.empty()){
-            return;
-        }
-        sub_A.push_back(output);
-        return;
-    }
- 
-    genSubSeqA(input.substr(1), output + input[0]);
-    genSubSeqA(input.substr(1), output);
-}
-
-void genSubSeqB(string input, string output){
-
-    if (input.empty()) {
-        if(output.empty()){
-            return;
-        }
-        sub_B.push_back(output);
-        return;
-    }
- 
-    genSubSeqB(input.substr(1), output + input[0]);
-    genSubSeqB(input.substr(1), output);
-}
-
+// funcao para calcular o sw
 matrix max_score(matrix H, string first_seq, string second_seq, int n, int m, int w){
     int diagonal, deletion, insertion;
     string seq_max;
@@ -54,10 +26,21 @@ matrix max_score(matrix H, string first_seq, string second_seq, int n, int m, in
             // cout << H[i][j] << endl;
         }
     }
-
-
-
     return H;
+}
+
+// funcao para gerar as sub sequencias
+vector<string> genSub(int size, string seq){
+    vector<string> sub_seqs;
+    for(int i=0; i< size; i++){
+        string stg = "";
+        for(int j=i; j < size; j++){
+            stg += seq[j];
+            sub_seqs.push_back(stg);
+        }
+    }
+
+    return sub_seqs;
 }
 
 
@@ -69,6 +52,7 @@ int main(){
     string outputB = "";
     int w = 0;
     int max = 0;
+    vector<string> sub_A, sub_B;
     string seqA_utilizada, seqB_utilizada;
 
     cin >> n >> m;
@@ -81,17 +65,21 @@ int main(){
     }
 
     //  Gerar todas as subsequencias a´ e b´ não-nulas de a e b
-    genSubSeqA(seqA, outputA);
-    genSubSeqB(seqB, outputB);
+    sub_A = genSub(n, seqA);
+    sub_B = genSub(m, seqB);
 
     
     // gera os possiveis pares entre as subsequencias
-    for (auto&& e1 : sub_A) {
-        for (auto&& e2 : sub_B) {
+    for (int i=0; i< int(sub_A.size());i++) {
+        for (int j=0; j< int(sub_B.size());j++) {
+
+            string e1 = sub_A[i];
+            string e2 = sub_B[j];
             
             int tamanho_e1 = e1.size();
             int tamanho_e2 = e2.size();
 
+            // calcula o sw
             H = max_score(H, "-"+e1, "-"+e2, tamanho_e1, tamanho_e2, w);
  
             // descobrindo os maiores scores

@@ -15,20 +15,13 @@ struct alignment{
 typedef vector<vector<int>> matrix;
 typedef vector<vector<alignment>> matrix_align;
 
-int calculate_score(char a, char b){
-    if(a == b){
-        return 2;
-    }else{
-        return -1;
-    }
-}
 
 tuple<matrix, matrix_align> smithWaterman_Algorithm(matrix H, string first_seq, string second_seq, int n, int m, int w, matrix_align direction){
     int diagonal, deletion, insertion;
 
     for (int i = 1; i <= n; i++){
         for (int j = 1; j <= m; j++){
-            w = calculate_score(first_seq[i], second_seq[j]);
+            w = first_seq[i] == second_seq[j] ? 2 : -1;
             diagonal = H[i-1][j-1] + w;
             deletion = H[i-1][j] - 1;
             insertion = H[i][j-1] - 1;
@@ -135,6 +128,11 @@ int main(){
 
     reverse(new_first_seq.begin(), new_first_seq.end());
     reverse(new_second_seq.begin(), new_second_seq.end());
+
+    cout << "Max score: " << max_value << endl;
+    cout << "Primeira sequencia: " << new_first_seq << endl;
+    cout << "Segunda sequencia: " << new_second_seq << endl;
+
 
     ofstream output_file;
     output_file.open ("output");

@@ -15,13 +15,7 @@ struct max_value{
     int score_max;
 };
 
-int calculate_score(char a, char b){
-    if(a == b){
-        return 2;
-    }else{
-        return -1;
-    }
-}
+
 
 matrix max_score(matrix H, string first_seq, string second_seq, int k, int w){
     int diagonal, deletion, insertion;
@@ -29,7 +23,7 @@ matrix max_score(matrix H, string first_seq, string second_seq, int k, int w){
 
     for (int i = 1; i <= k; i++){
         for (int j = 1; j <= k; j++){
-            w = calculate_score(first_seq[i], second_seq[j]);
+            w = first_seq[i] == second_seq[j] ? 2 : -1;
 
             diagonal = H[i-1][j-1] + w;
             deletion = H[i-1][j] - 1;
@@ -148,10 +142,10 @@ int main(){
             }
         } 
 
-        // cout << "max score: " << score_max << endl;
-        // cout << "sub sequencia A utilizada: " << seq_final << endl;
-        // cout << "sub sequencia B utilizada: " << sub_seqB << endl;
-        // cout << endl;
+        cout << "max score: " << score_max << endl;
+        cout << "sub sequencia A utilizada: " << seq_final << endl;
+        cout << "sub sequencia B utilizada: " << sub_seqB << endl;
+        cout << endl;
 
         
 

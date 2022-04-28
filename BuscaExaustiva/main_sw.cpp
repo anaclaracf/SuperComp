@@ -38,21 +38,13 @@ void genSubSeqB(string input, string output){
     genSubSeqB(input.substr(1), output);
 }
 
-int calculate_score(char a, char b){
-    if(a == b){
-        return 2;
-    }else{
-        return -1;
-    }
-}
-
 matrix max_score(matrix H, string first_seq, string second_seq, int n, int m, int w){
     int diagonal, deletion, insertion;
     string seq_max;
 
     for (int i = 1; i <= n; i++){
         for (int j = 1; j <= m; j++){
-            w = calculate_score(first_seq[i], second_seq[j]);
+            w = (first_seq[i] == second_seq[j] ? 2 : -1);
 
             diagonal = H[i-1][j-1] + w;
             deletion = H[i-1][j] - 1;
@@ -96,8 +88,7 @@ int main(){
     // gera os possiveis pares entre as subsequencias
     for (auto&& e1 : sub_A) {
         for (auto&& e2 : sub_B) {
-            cout << e1 << " , " << e2 << endl;
-
+            
             int tamanho_e1 = e1.size();
             int tamanho_e2 = e2.size();
 
@@ -117,9 +108,9 @@ int main(){
         }
     }
 
-    cout << max << endl;
-    cout << seqA_utilizada << endl;
-    cout << seqB_utilizada << endl;
+    cout << "Score maximo: " << max << endl;
+    cout << "Primeira sequencia utilizada: " << seqA_utilizada << endl;
+    cout << "Segunda sequencia utilizada: " << seqB_utilizada << endl;
 
     
 

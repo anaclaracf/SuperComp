@@ -88,7 +88,7 @@ int main(){
         sub_seqB = seqB.substr(j, k);
 
         // gerando um número aleatorio para p
-        uniform_int_distribution<int> p_aleatorio(1, 100);
+        uniform_int_distribution<int> p_aleatorio(1, n+m);
         p = p_aleatorio(generator);
 
         // cout << "p = " << p << endl;

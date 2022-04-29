@@ -1,400 +1,400 @@
 Max Score: 0
-sub sequencia A utilizada: T
-sub sequencia B utilizada: G
------------------------------------
-Max Score: 4
-sub sequencia A utilizada: -TTTTGTA
-sub sequencia B utilizada: GGA-TGC-
------------------------------------
-Max Score: 4
-sub sequencia A utilizada: -TTTTGTAG
-sub sequencia B utilizada: GCA-CTA-A
------------------------------------
-Max Score: 3
-sub sequencia A utilizada: C-TTTTGTAG
-sub sequencia B utilizada: -ACG-GAGGA
------------------------------------
-Max Score: 2
-sub sequencia A utilizada: -T
-sub sequencia B utilizada: -C
------------------------------------
-Max Score: 2
-sub sequencia A utilizada: -TTT
-sub sequencia B utilizada: -CAA
------------------------------------
-Max Score: 5
-sub sequencia A utilizada: C-TTTTGTAG
-sub sequencia B utilizada: -CAGGTGCA-
------------------------------------
-Max Score: 4
-sub sequencia A utilizada: C-TTTTGTA
-sub sequencia B utilizada: TGC--CAAG
------------------------------------
-Max Score: 3
-sub sequencia A utilizada: TGTAG
-sub sequencia B utilizada: GGA-T
------------------------------------
-Max Score: 4
-sub sequencia A utilizada: C-TTTTG
-sub sequencia B utilizada: CA-CTA-
------------------------------------
-Max Score: 3
-sub sequencia A utilizada: C-TTTTGT
-sub sequencia B utilizada: AGCG--CA
------------------------------------
-Max Score: 4
-sub sequencia A utilizada: -TTTTG
-sub sequencia B utilizada: A-TGC-
------------------------------------
-Max Score: 0
-sub sequencia A utilizada: T
-sub sequencia B utilizada: A
------------------------------------
-Max Score: 4
-sub sequencia A utilizada: TGTAG
-sub sequencia B utilizada: CTA-A
------------------------------------
-Max Score: 5
-sub sequencia A utilizada: -TTTTGTAG
-sub sequencia B utilizada: CAGGTGCA-
------------------------------------
-Max Score: 0
-sub sequencia A utilizada: T
-sub sequencia B utilizada: A
------------------------------------
-Max Score: 3
-sub sequencia A utilizada: C-TTTTGTA
-sub sequencia B utilizada: CG--CAGGT
------------------------------------
-Max Score: 3
-sub sequencia A utilizada: C-TTTTGT
-sub sequencia B utilizada: A-ACG-GA
------------------------------------
-Max Score: 2
-sub sequencia A utilizada: GT
-sub sequencia B utilizada: G-
------------------------------------
-Max Score: 0
-sub sequencia A utilizada: T
-sub sequencia B utilizada: C
------------------------------------
-Max Score: 4
-sub sequencia A utilizada: TGTA
-sub sequencia B utilizada: TGC-
------------------------------------
-Max Score: 3
-sub sequencia A utilizada: C-TTTTGTAG
-sub sequencia B utilizada: CG-GAGGA-T
------------------------------------
-Max Score: 0
-sub sequencia A utilizada: -
-sub sequencia B utilizada: -
------------------------------------
-Max Score: 4
-sub sequencia A utilizada: -TTTTGTAG
-sub sequencia B utilizada: --CAGGTGC
------------------------------------
-Max Score: 4
-sub sequencia A utilizada: TTGTAG
-sub sequencia B utilizada: -CTA-A
------------------------------------
-Max Score: 2
-sub sequencia A utilizada: TAG
-sub sequencia B utilizada: -AC
------------------------------------
-Max Score: 2
-sub sequencia A utilizada: TAG
-sub sequencia B utilizada: AGG
------------------------------------
-Max Score: 4
-sub sequencia A utilizada: GTAG
-sub sequencia B utilizada: CTA-
------------------------------------
-Max Score: 4
-sub sequencia A utilizada: TTGTAG
-sub sequencia B utilizada: CTA-AC
------------------------------------
-Max Score: 3
-sub sequencia A utilizada: -TTTTGTAG
-sub sequencia B utilizada: -ACG-GAGG
------------------------------------
-Max Score: 5
-sub sequencia A utilizada: TTTTGTAG
-sub sequencia B utilizada: TGCA-CTA
------------------------------------
-Max Score: 3
-sub sequencia A utilizada: -TTTTGTAG
-sub sequencia B utilizada: G-GAGGA-T
------------------------------------
-Max Score: 2
-sub sequencia A utilizada: C-TTT
-sub sequencia B utilizada: A-ACG
------------------------------------
-Max Score: 0
-sub sequencia A utilizada: -
-sub sequencia B utilizada: -
------------------------------------
-Max Score: 0
-sub sequencia A utilizada: T
+sub sequencia A utilizada: G
 sub sequencia B utilizada: T
 -----------------------------------
-Max Score: 5
-sub sequencia A utilizada: -TTTTGTAG
-sub sequencia B utilizada: AGGTGCA-C
+Max Score: 10
+sub sequencia A utilizada: CATGTAAC-CTG
+sub sequencia B utilizada: CGCATAA---CG
+-----------------------------------
+Max Score: 7
+sub sequencia A utilizada: TGTAAC-CTGAGA
+sub sequencia B utilizada: TA--CAATA--T-
+-----------------------------------
+Max Score: 9
+sub sequencia A utilizada: CATGTAAC-CTGAG
+sub sequencia B utilizada: T-CAGTCAGTCGCA
+-----------------------------------
+Max Score: 2
+sub sequencia A utilizada: AT
+sub sequencia B utilizada: AA
 -----------------------------------
 Max Score: 4
-sub sequencia A utilizada: TGTAG
-sub sequencia B utilizada: GGTGC
+sub sequencia A utilizada: AAC-CT
+sub sequencia B utilizada: --ACGC
+-----------------------------------
+Max Score: 10
+sub sequencia A utilizada: CATGTAAC-CTGAGA
+sub sequencia B utilizada: A-CGTGGTTA--CAA
+-----------------------------------
+Max Score: 6
+sub sequencia A utilizada: TGTAAC-CTGAGA
+sub sequencia B utilizada: A---CG--ACGCA
+-----------------------------------
+Max Score: 8
+sub sequencia A utilizada: CATGTAAC
+sub sequencia B utilizada: CGCATAA-
+-----------------------------------
+Max Score: 6
+sub sequencia A utilizada: CATGTAAC-C
+sub sequencia B utilizada: --CAATA--T
+-----------------------------------
+Max Score: 7
+sub sequencia A utilizada: CATGTAAC-CTG
+sub sequencia B utilizada: T-CTT-G-A-CG
+-----------------------------------
+Max Score: 9
+sub sequencia A utilizada: TAAC-CTGA
+sub sequencia B utilizada: TAA---CG-
+-----------------------------------
+Max Score: 0
+sub sequencia A utilizada: A
+sub sequencia B utilizada: G
 -----------------------------------
 Max Score: 5
-sub sequencia A utilizada: -TTTTGTAG
-sub sequencia B utilizada: CAGGTGCA-
+sub sequencia A utilizada: TAAC-CTG
+sub sequencia B utilizada: ATA--T-C
 -----------------------------------
-Max Score: 2
-sub sequencia A utilizada: GT
-sub sequencia B utilizada: GA
------------------------------------
-Max Score: 2
-sub sequencia A utilizada: C-
-sub sequencia B utilizada: CG
------------------------------------
-Max Score: 3
-sub sequencia A utilizada: C-TTTT
-sub sequencia B utilizada: GCA-CT
------------------------------------
-Max Score: 3
-sub sequencia A utilizada: TTTGTAG
-sub sequencia B utilizada: CG-GAGG
+Max Score: 10
+sub sequencia A utilizada: CATGTAAC-CTGA
+sub sequencia B utilizada: CGTGGTTA--CAA
 -----------------------------------
 Max Score: 0
 sub sequencia A utilizada: G
+sub sequencia B utilizada: -
+-----------------------------------
+Max Score: 10
+sub sequencia A utilizada: TGTAAC-CTGAGA
+sub sequencia B utilizada: TT-G-A-CGTGGT
+-----------------------------------
+Max Score: 8
+sub sequencia A utilizada: CATGTAAC-CT
+sub sequencia B utilizada: -T-CAGTCAGT
+-----------------------------------
+Max Score: 2
+sub sequencia A utilizada: TAA
+sub sequencia B utilizada: T-G
+-----------------------------------
+Max Score: 0
+sub sequencia A utilizada: C
 sub sequencia B utilizada: A
 -----------------------------------
-Max Score: 2
-sub sequencia A utilizada: TT
-sub sequencia B utilizada: TG
+Max Score: 5
+sub sequencia A utilizada: C-CTGA
+sub sequencia B utilizada: ---CG-
 -----------------------------------
-Max Score: 3
-sub sequencia A utilizada: C-TTTTGTA
-sub sequencia B utilizada: GAGCG--CA
+Max Score: 11
+sub sequencia A utilizada: CATGTAAC-CTGAGA
+sub sequencia B utilizada: GTCAGTCGCATAA--
 -----------------------------------
-Max Score: 4
-sub sequencia A utilizada: -TTTTG
-sub sequencia B utilizada: GA-TGC
+Max Score: 0
+sub sequencia A utilizada: A
+sub sequencia B utilizada: A
 -----------------------------------
-Max Score: 2
-sub sequencia A utilizada: -TT
-sub sequencia B utilizada: -AC
------------------------------------
-Max Score: 2
-sub sequencia A utilizada: C-
-sub sequencia B utilizada: CA
------------------------------------
-Max Score: 4
-sub sequencia A utilizada: TTTGTAG
-sub sequencia B utilizada: A-CTA-A
+Max Score: 9
+sub sequencia A utilizada: TGTAAC-CTGAGA
+sub sequencia B utilizada: G-A-CGTGGTTA-
 -----------------------------------
 Max Score: 5
-sub sequencia A utilizada: TTTTGTAG
-sub sequencia B utilizada: GGTGCA-C
+sub sequencia A utilizada: GTAAC-CTG
+sub sequencia B utilizada: AATA--T-C
+-----------------------------------
+Max Score: 4
+sub sequencia A utilizada: -CTGA
+sub sequencia B utilizada: T-CAG
+-----------------------------------
+Max Score: 3
+sub sequencia A utilizada: C-CT
+sub sequencia B utilizada: CGCA
+-----------------------------------
+Max Score: 4
+sub sequencia A utilizada: ATGTAA
+sub sequencia B utilizada: TA--T-
+-----------------------------------
+Max Score: 5
+sub sequencia A utilizada: TAAC-CTG
+sub sequencia B utilizada: TA--T-CA
+-----------------------------------
+Max Score: 9
+sub sequencia A utilizada: CATGTAAC-CTGA
+sub sequencia B utilizada: T-CAGTCAGTCGC
+-----------------------------------
+Max Score: 8
+sub sequencia A utilizada: TGTAAC-CTGAG
+sub sequencia B utilizada: TTA--CAATA--
+-----------------------------------
+Max Score: 9
+sub sequencia A utilizada: CATGTAAC-CTGA
+sub sequencia B utilizada: GTCAGTCGCATAA
+-----------------------------------
+Max Score: 5
+sub sequencia A utilizada: AC-CTGA
+sub sequencia B utilizada: -T-CAGT
 -----------------------------------
 Max Score: 0
 sub sequencia A utilizada: T
 sub sequencia B utilizada: A
 -----------------------------------
-Max Score: 4
-sub sequencia A utilizada: TTTGT
-sub sequencia B utilizada: A-TGC
------------------------------------
 Max Score: 2
-sub sequencia A utilizada: GTAG
-sub sequencia B utilizada: GCG-
+sub sequencia A utilizada: TG
+sub sequencia B utilizada: TT
 -----------------------------------
-Max Score: 2
-sub sequencia A utilizada: TT
-sub sequencia B utilizada: TA
+Max Score: 10
+sub sequencia A utilizada: CATGTAAC-CTGA
+sub sequencia B utilizada: CGTGGTTA--CAA
 -----------------------------------
-Max Score: 0
-sub sequencia A utilizada: GT
-sub sequencia B utilizada: CA
+Max Score: 6
+sub sequencia A utilizada: TGTAAC-C
+sub sequencia B utilizada: GGTTA--C
 -----------------------------------
-Max Score: 2
-sub sequencia A utilizada: C-TT
-sub sequencia B utilizada: GCG-
+Max Score: 10
+sub sequencia A utilizada: CATGTAAC-CTGA
+sub sequencia B utilizada: -CGTGGTTA--CA
 -----------------------------------
 Max Score: 4
-sub sequencia A utilizada: TTTTGTAG
-sub sequencia B utilizada: -CTA-ACG
------------------------------------
-Max Score: 3
-sub sequencia A utilizada: C-TTTTGT
-sub sequencia B utilizada: -ACG-GAG
------------------------------------
-Max Score: 0
-sub sequencia A utilizada: G
-sub sequencia B utilizada: A
------------------------------------
-Max Score: 3
-sub sequencia A utilizada: TTTTGTAG
-sub sequencia B utilizada: ACG-GAGG
+sub sequencia A utilizada: AGA
+sub sequencia B utilizada: AGT
 -----------------------------------
 Max Score: 2
-sub sequencia A utilizada: GTAG
-sub sequencia B utilizada: -CAA
+sub sequencia A utilizada: TG
+sub sequencia B utilizada: TT
+-----------------------------------
+Max Score: 6
+sub sequencia A utilizada: GTAAC-CTG
+sub sequencia B utilizada: TA--CAATA
+-----------------------------------
+Max Score: 7
+sub sequencia A utilizada: CATGTAAC-C
+sub sequencia B utilizada: AGTCAGTCGC
+-----------------------------------
+Max Score: 2
+sub sequencia A utilizada: GA
+sub sequencia B utilizada: GC
+-----------------------------------
+Max Score: 2
+sub sequencia A utilizada: -C
+sub sequencia B utilizada: --
+-----------------------------------
+Max Score: 7
+sub sequencia A utilizada: CATGTAAC-CTGA
+sub sequencia B utilizada: TT-CTT-G-A-CG
+-----------------------------------
+Max Score: 8
+sub sequencia A utilizada: CATGTAAC-
+sub sequencia B utilizada: CATAA---C
+-----------------------------------
+Max Score: 4
+sub sequencia A utilizada: AC-CT
+sub sequencia B utilizada: T-CAG
+-----------------------------------
+Max Score: 2
+sub sequencia A utilizada: AC
+sub sequencia B utilizada: AC
+-----------------------------------
+Max Score: 7
+sub sequencia A utilizada: CATGTAAC-CT
+sub sequencia B utilizada: CAATA--T-CA
+-----------------------------------
+Max Score: 8
+sub sequencia A utilizada: CATGTAAC-CT
+sub sequencia B utilizada: GGTTA--CAAT
 -----------------------------------
 Max Score: 0
 sub sequencia A utilizada: A
 sub sequencia B utilizada: -
 -----------------------------------
-Max Score: 4
-sub sequencia A utilizada: -TTTTGTAG
-sub sequencia B utilizada: AGGA-TGC-
------------------------------------
-Max Score: 2
-sub sequencia A utilizada: TGTAG
-sub sequencia B utilizada: -CAAG
------------------------------------
-Max Score: 3
-sub sequencia A utilizada: TTGTAG
-sub sequencia B utilizada: GCA-CT
------------------------------------
-Max Score: 3
-sub sequencia A utilizada: C-TTTTGTAG
-sub sequencia B utilizada: AGCG--CAGG
------------------------------------
-Max Score: 2
-sub sequencia A utilizada: TTGT
-sub sequencia B utilizada: AGGT
------------------------------------
-Max Score: 2
-sub sequencia A utilizada: C-TTT
-sub sequencia B utilizada: --CAG
+Max Score: 7
+sub sequencia A utilizada: TAAC-CT
+sub sequencia B utilizada: TAA---C
 -----------------------------------
 Max Score: 4
-sub sequencia A utilizada: TTTGTA
-sub sequencia B utilizada: -TGC--
+sub sequencia A utilizada: CTGAG
+sub sequencia B utilizada: CTT-G
 -----------------------------------
 Max Score: 2
-sub sequencia A utilizada: AG
-sub sequencia B utilizada: A-
------------------------------------
-Max Score: 3
-sub sequencia A utilizada: GTAG
-sub sequencia B utilizada: GA-T
------------------------------------
-Max Score: 2
-sub sequencia A utilizada: -T
-sub sequencia B utilizada: --
+sub sequencia A utilizada: AAC
+sub sequencia B utilizada: A--
 -----------------------------------
 Max Score: 0
-sub sequencia A utilizada: T
-sub sequencia B utilizada: -
------------------------------------
-Max Score: 5
-sub sequencia A utilizada: TTTTGTAG
-sub sequencia B utilizada: GGTGCA-C
+sub sequencia A utilizada: CTG
+sub sequencia B utilizada: --C
 -----------------------------------
 Max Score: 4
-sub sequencia A utilizada: C-TTTTGT
-sub sequencia B utilizada: GGA-TGC-
+sub sequencia A utilizada: CATGTA
+sub sequencia B utilizada: CTT-G-
+-----------------------------------
+Max Score: 7
+sub sequencia A utilizada: GTAAC-CTGAGA
+sub sequencia B utilizada: AATA--T-CAGT
+-----------------------------------
+Max Score: 8
+sub sequencia A utilizada: CATGTAAC-CTG
+sub sequencia B utilizada: -T-CAGTCAGTC
+-----------------------------------
+Max Score: 2
+sub sequencia A utilizada: -C
+sub sequencia B utilizada: -C
+-----------------------------------
+Max Score: 9
+sub sequencia A utilizada: CATGTAAC-CTG
+sub sequencia B utilizada: CAGTCAGTCGCA
+-----------------------------------
+Max Score: 4
+sub sequencia A utilizada: GTAAC-
+sub sequencia B utilizada: --ACGC
+-----------------------------------
+Max Score: 2
+sub sequencia A utilizada: GA
+sub sequencia B utilizada: G-
+-----------------------------------
+Max Score: 10
+sub sequencia A utilizada: CATGTAAC-CTGA
+sub sequencia B utilizada: TCGCATAA---CG
+-----------------------------------
+Max Score: 5
+sub sequencia A utilizada: -CTGAGA
+sub sequencia B utilizada: -ACGCA-
+-----------------------------------
+Max Score: 6
+sub sequencia A utilizada: TGTAAC-CT
+sub sequencia B utilizada: TA--CAATA
+-----------------------------------
+Max Score: 8
+sub sequencia A utilizada: CATGTAAC-CTGAG
+sub sequencia B utilizada: T-CTT-G-A-CGTG
+-----------------------------------
+Max Score: 5
+sub sequencia A utilizada: CATGTA
+sub sequencia B utilizada: GTGGTT
+-----------------------------------
+Max Score: 6
+sub sequencia A utilizada: AC-CTGA
+sub sequencia B utilizada: G-A-CGT
+-----------------------------------
+Max Score: 5
+sub sequencia A utilizada: AAC-CTGA
+sub sequencia B utilizada: A---CG--
+-----------------------------------
+Max Score: 4
+sub sequencia A utilizada: CAT
+sub sequencia B utilizada: CAA
+-----------------------------------
+Max Score: 6
+sub sequencia A utilizada: TAAC-C
+sub sequencia B utilizada: CATAA-
+-----------------------------------
+Max Score: 2
+sub sequencia A utilizada: -C
+sub sequencia B utilizada: -A
+-----------------------------------
+Max Score: 2
+sub sequencia A utilizada: TG
+sub sequencia B utilizada: TC
+-----------------------------------
+Max Score: 8
+sub sequencia A utilizada: TGTAAC-CTGAG
+sub sequencia B utilizada: GGTTA--CAATA
+-----------------------------------
+Max Score: 10
+sub sequencia A utilizada: CATGTAAC-CTG
+sub sequencia B utilizada: GCATAA---CG-
+-----------------------------------
+Max Score: 0
+sub sequencia A utilizada: -
+sub sequencia B utilizada: G
+-----------------------------------
+Max Score: 5
+sub sequencia A utilizada: AC-CT
+sub sequencia B utilizada: -A-CG
+-----------------------------------
+Max Score: 6
+sub sequencia A utilizada: CATGTAAC
+sub sequencia B utilizada: CAATA--T
+-----------------------------------
+Max Score: 7
+sub sequencia A utilizada: CATGTAAC-CTG
+sub sequencia B utilizada: CAATA--T-CAG
 -----------------------------------
 Max Score: 0
 sub sequencia A utilizada: T
 sub sequencia B utilizada: A
 -----------------------------------
-Max Score: 2
-sub sequencia A utilizada: -TT
-sub sequencia B utilizada: --C
+Max Score: 9
+sub sequencia A utilizada: TAAC-CTGAG
+sub sequencia B utilizada: TAA---CG--
 -----------------------------------
-Max Score: 3
-sub sequencia A utilizada: C-TTT
-sub sequencia B utilizada: A-CTA
+Max Score: 8
+sub sequencia A utilizada: CATGTAAC-CTG
+sub sequencia B utilizada: --T-CAGTCAGT
 -----------------------------------
-Max Score: 4
-sub sequencia A utilizada: TTTTGTAG
-sub sequencia B utilizada: A-CTA-AC
+Max Score: 5
+sub sequencia A utilizada: TGTAAC
+sub sequencia B utilizada: GTTA--
+-----------------------------------
+Max Score: 6
+sub sequencia A utilizada: CATGTAAC
+sub sequencia B utilizada: TCGCATAA
+-----------------------------------
+Max Score: 6
+sub sequencia A utilizada: AC-CTGAGA
+sub sequencia B utilizada: -CG--ACGC
+-----------------------------------
+Max Score: 10
+sub sequencia A utilizada: CATGTAAC-CTG
+sub sequencia B utilizada: CGCATAA---CG
 -----------------------------------
 Max Score: 0
-sub sequencia A utilizada: -
+sub sequencia A utilizada: G
+sub sequencia B utilizada: C
+-----------------------------------
+Max Score: 6
+sub sequencia A utilizada: AAC-CTGAGA
+sub sequencia B utilizada: TA--T-CAGT
+-----------------------------------
+Max Score: 0
+sub sequencia A utilizada: C
+sub sequencia B utilizada: A
+-----------------------------------
+Max Score: 6
+sub sequencia A utilizada: AC-CTGA
+sub sequencia B utilizada: G-A-CGT
+-----------------------------------
+Max Score: 11
+sub sequencia A utilizada: CATGTAAC-CTGAGA
+sub sequencia B utilizada: TCAGTCGCATAA---
+-----------------------------------
+Max Score: 9
+sub sequencia A utilizada: CATGTAAC-CTGAGA
+sub sequencia B utilizada: GGTTA--CAATA--T
+-----------------------------------
+Max Score: 7
+sub sequencia A utilizada: TGTAAC-CTGAGA
+sub sequencia B utilizada: AATA--T-CAGTC
+-----------------------------------
+Max Score: 0
+sub sequencia A utilizada: C
 sub sequencia B utilizada: T
 -----------------------------------
-Max Score: 4
-sub sequencia A utilizada: TTTGTAG
-sub sequencia B utilizada: A-TGC--
------------------------------------
-Max Score: 3
-sub sequencia A utilizada: C-TTTTGT
-sub sequencia B utilizada: A-ACG-GA
+Max Score: 7
+sub sequencia A utilizada: ATGTAAC-CTGAGA
+sub sequencia B utilizada: AATA--T-CAGTCA
 -----------------------------------
 Max Score: 4
-sub sequencia A utilizada: TGTA
-sub sequencia B utilizada: GTGC
------------------------------------
-Max Score: 3
-sub sequencia A utilizada: TTGTAG
-sub sequencia B utilizada: GAGGA-
------------------------------------
-Max Score: 4
-sub sequencia A utilizada: C-TTTT
-sub sequencia B utilizada: C--CAA
------------------------------------
-Max Score: 4
-sub sequencia A utilizada: -TTTTGTA
-sub sequencia B utilizada: GGA-TGC-
------------------------------------
-Max Score: 0
-sub sequencia A utilizada: T
-sub sequencia B utilizada: C
------------------------------------
-Max Score: 4
-sub sequencia A utilizada: TTTGTAG
-sub sequencia B utilizada: CTA-ACG
------------------------------------
-Max Score: 0
-sub sequencia A utilizada: C
-sub sequencia B utilizada: -
+sub sequencia A utilizada: CAT
+sub sequencia B utilizada: CAG
 -----------------------------------
 Max Score: 2
-sub sequencia A utilizada: C-TTT
-sub sequencia B utilizada: --CAG
+sub sequencia A utilizada: TG
+sub sequencia B utilizada: T-
 -----------------------------------
-Max Score: 4
-sub sequencia A utilizada: C-TTTTGTAG
-sub sequencia B utilizada: -GAGGA-TGC
+Max Score: 9
+sub sequencia A utilizada: ATGTAAC-CTG
+sub sequencia B utilizada: GTGGTTA--CA
 -----------------------------------
-Max Score: 5
-sub sequencia A utilizada: C-TTTTGTAG
-sub sequencia B utilizada: GTGCA-CTA-
------------------------------------
-Max Score: 4
-sub sequencia A utilizada: -TTTTGTAG
-sub sequencia B utilizada: -CTA-ACG-
------------------------------------
-Max Score: 0
-sub sequencia A utilizada: T
-sub sequencia B utilizada: C
------------------------------------
-Max Score: 4
-sub sequencia A utilizada: -TTTTGTAG
-sub sequencia B utilizada: -CTA-ACG-
------------------------------------
-Max Score: 2
-sub sequencia A utilizada: AG
-sub sequencia B utilizada: AC
------------------------------------
-Max Score: 0
-sub sequencia A utilizada: C
-sub sequencia B utilizada: -
+Max Score: 6
+sub sequencia A utilizada: ATGTAAC-
+sub sequencia B utilizada: GTGGTTA-
 -----------------------------------
 Max Score: 5
-sub sequencia A utilizada: TTTTGTAG
-sub sequencia B utilizada: AGGTGCA-
------------------------------------
-Max Score: 4
-sub sequencia A utilizada: TTGTAG
-sub sequencia B utilizada: AGGTGC
------------------------------------
-Max Score: 4
-sub sequencia A utilizada: C-TT
-sub sequencia B utilizada: C--C
+sub sequencia A utilizada: C-CTGA
+sub sequencia B utilizada: -CG--A
 -----------------------------------

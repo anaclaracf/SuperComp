@@ -12,15 +12,9 @@
 #include <thrust/copy.h>
 #include <thrust/fill.h>
 #include <thrust/iterator/counting_iterator.h>
-#include <tuple>
-
+#include<omp.h>
 
 using namespace std;
-
-struct index_seq {
-    int begin_seq;
-    int size_seq;
-};
 
 vector<string> genSub(int size, string seq){
     vector<string> sub_seqs;
@@ -30,122 +24,63 @@ vector<string> genSub(int size, string seq){
             stg += seq[j];
             sub_seqs.push_back(stg);
         }
-
     }
 
     return sub_seqs;
 }
 
-struct temp_calculator {
 
-    thrust::device_ptr<char> a_sub;
-    thrust::device_ptr<index_seq> index_B;
-    thrust::device_ptr<char> sequence_B;
-
-    temp_calculator(thrust::device_ptr<char> a_sub_, thrust::device_ptr<index_seq> index_B_, thrust::device_ptr<char> sequence_B_):
-    a_sub(a_sub_),
-    index_B(index_B_),
-    sequence_B(sequence_B_){};
-
-    __host__ __device__
-    int operator()(const int& i){
-
-        return 0;
-    }
-
-};
-
-
-
-struct score_calculator {
-
-    thrust::device_ptr<index_seq> index_A;
-    thrust::device_ptr<index_seq> index_B;
+struct temp {
     thrust::device_ptr<char> sequence_A;
-    thrust::device_ptr<char> sequence_B;
-    int size_idxB;
-    
+    char letter_B;
+    thrust::device_ptr<int> line;
 
-    score_calculator(thrust::device_ptr<index_seq> index_A_, thrust::device_ptr<index_seq> index_B_, thrust::device_ptr<char> sequence_A_, thrust::device_ptr<char> sequence_B_, int size_idxB_):
-    index_A(index_A_),
-    index_B(index_B_),
+    temp(thrust::device_ptr<char> sequence_A_, char letter_B_, thrust::device_ptr<int> line_):
     sequence_A(sequence_A_),
-    sequence_B(sequence_B_),
-    size_idxB(size_idxB_){};
+    letter_B(letter_B_),
+    line(line_){};
 
     __host__ __device__
     int operator()(const int& x){
 
-        index_seq ind;
-        ind = index_A[x];
-        thrust::device_ptr<char> a_sub;
+        int diagonal = line[x-1] + (letter_B == sequence_A[x-1] ? 2 : -1);
+        int deletion = line[x] - 1;
 
-        int i = 0;
-        for(int e = ind.begin_seq; e < (ind.begin_seq + ind.size_seq); e++){
-            a_sub[i] = sequence_A[e];
-            i++;
+        int max = 0;
+
+        if (deletion >= diagonal && deletion > max){
+            return deletion;
         }
-
-        for(int w = 0; w < size_idxB; w++){
-            index_seq ind_B;
-            ind_B = index_B[w];
-            thrust::device_ptr<char> b_sub;
-
-            int f = 0;
-            for(int g = ind_B.begin_seq; g < (ind_B.begin_seq + ind_B.size_seq); g++){
-                b_sub[f] = sequence_B[g];
-                f++;
-            }
+        else if (diagonal > max){
+            return diagonal;
         }
-
-        // thrust::counting_iterator<int> c0(0);
-        // thrust::counting_iterator<int> c1(size_idxB);
-        // thrust::device_ptr<int> result;
-
-        // thrust::transform(c0, c1, result, temp_calculator(a_sub, index_B, sequence_B));
-
-        return 0;
+        else{
+            return max;
+        }
 
     }
 
 };
 
+struct lateral {
 
-thrust::device_vector<char> sequence_generator(int size, vector<string> sub, thrust::device_vector<char> sequence){
+    __host__ __device__
+    int operator()(const int& i, const int& j){
 
-    // todas as sequencias
-    for(int i = 0; i < size; i++){
+        int max = 0;
+        int actual = j;        
+        int left = i-1;
 
-        int size_sequencia = int(sub[i].size());
+        max = (left < actual ? actual : left);
 
-        // todas letras de cada sequencia
-        for(int e = 0; e < size_sequencia; e++){
-            sequence.push_back(sub[i][e]);
+        if(max < 0){
+            max =  0;
         }
+
+        return max;
     }
 
-    return sequence;
-}
-
-thrust::device_vector<index_seq> index_generator(int size, vector<string> sub, thrust::device_vector<index_seq> indexes){
-
-    int start = 0;
-    // todas as sequencias
-    for(int i = 0; i < size; i++){
-
-        index_seq indices;
-
-        int size_sequencia = int(sub[i].size());
-
-        indices.size_seq = size_sequencia;
-        indices.begin_seq = start;
-        indexes.push_back(indices);
-
-        start += size_sequencia;
-    }
-
-    return indexes;
-}
+};
 
 
 int main(){
@@ -153,9 +88,7 @@ int main(){
     int n, m;
     string seq_A, seq_B;
     vector<string> sub_A, sub_B;
-    
-    thrust::device_vector<index_seq> index_A_final,index_A, index_B, index_B_final;
-    thrust::device_vector<char> sequence_A, sequence_A_final, sequence_B_final, sequence_B;
+    thrust::device_vector<int> results[2], maximos;
 
     cin >> n >> m;
     cin >> seq_A >> seq_B;
@@ -167,37 +100,50 @@ int main(){
     int size_A = sub_A.size();
     int size_B = sub_B.size();
 
-    int cont = 0;
-    for (int a = 0; a < size_A; a++){
-        for (int b = 0; b < size_B; b++){
-            cont ++;
+    // criando contador inicial para percorrer a sequencia A
+    thrust::counting_iterator<int> counter_initial(1);
+
+    // utilizando openmp para paralelizar o processo
+    #pragma omp for collapse(2)
+
+    // percorre o tamanho das possíveis sequencias de A
+    for (int i=0; i < size_A; i++) {
+        // percorre o tamanho das possíveis sequencias de B
+        for (int j=0; j < size_B; j++) {
+
+            // transforma a sub sequencia em um device vector para utilização da GPU
+            thrust::device_vector<char> subseq_A(sub_A[i].begin(), sub_A[i].end());
+            thrust::device_vector<char> subseq_B(sub_B[j].begin(), sub_B[j].end());
+                        
+            int size_subB = int(subseq_B.size());
+            int size_subA = int(subseq_A.size());
+
+            thrust::counting_iterator<int> counter_final(size_subA+1);
+
+            results[0].resize(size_subA+1);
+            results[1].resize(size_subA+1);
+
+            thrust::fill(results[0].begin(), results[0].end(),0);
+
+
+            for(int e = 0; e < size_subB; e++){
+                char letter_B = subseq_B[e];
+                thrust::transform(counter_initial, counter_final, results[1].begin() + 1, temp(subseq_A.data(), letter_B, results[0].data()));
+                thrust::inclusive_scan(results[1].begin()+1, results[1].end(), results[0].begin()+1, lateral());
+            }
+
+            maximos.push_back(results[0].back());
+
+            // cout << results[0].back() << endl;
+            
         }
+        
     }
 
+    int max_value = thrust::reduce(maximos.begin(), maximos.end(),0,thrust::maximum<int>());
 
-    sequence_A_final = sequence_generator(size_A, sub_A, sequence_A);
-    index_A_final = index_generator(size_A, sub_A, index_A);
+    cout << max_value << endl;
 
-    sequence_B_final = sequence_generator(size_B, sub_B, sequence_B);
-    index_B_final = index_generator(size_B, sub_B, index_B);
-
-    thrust::counting_iterator<int> c0(0);
-    thrust::counting_iterator<int> c1(int(index_A_final.size()));
-    thrust::device_vector<int> result(cont);
-
-    int size_idx_B = int(index_B_final.size());
-
-    thrust::transform(c0, c1, result.begin() + 1, score_calculator(index_A_final.data(), index_B_final.data(), sequence_A_final.data(), sequence_B_final.data(), size_idx_B));
-    // int max_value = thrust::reduce(result.begin(), result.end(),0,thrust::maximum<int>());
-
-    // cout << max_value << endl;
-
-    // for(int i = 0 ; i < int(index_A_final.size()); i++){
-    //     index_seq ind;
-    //     ind = index_A_final[i];
-    //     cout << ind.begin_seq << endl;
-    // }
-    
     return 0;
 
 }
